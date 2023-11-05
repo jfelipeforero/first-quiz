@@ -28,8 +28,9 @@ def test_question4_only_owned_by_bessie():
   pets_db.create_db()
 
   with pets_db.get_connection() as con:
-    res = con.execute(sql_only_owned_by_bessie)
+    res = con.execute(sql_only_owned_by_bessie) 
     rows = res.fetchall()
+    print(rows)
 
   rows.sort()
 
